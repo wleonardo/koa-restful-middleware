@@ -4,7 +4,7 @@ const Router = require('koa-router');
 const router = new Router();
 const restful = require('../index.js');
 
-router.get('/', restful(require('./api-handle.js')));
+router.all('/', restful(require('./api-handle.js')));
 
 app
   .use(router.routes())

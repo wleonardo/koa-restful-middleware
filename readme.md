@@ -13,7 +13,7 @@ const Router = require('koa-router');
 const router = new Router();
 const restful = require('koa-restful-middleware');
 
-router.get('/', restful(require('./api-handle.js')));
+router.all('/', restful(require('./api-handle.js')));
 
 app
   .use(router.routes())
